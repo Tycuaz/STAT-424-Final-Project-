@@ -12,7 +12,7 @@ The dashboard contains two interactive panels that allow users to explore these 
 ## Repository Structure
 
 ```bash
-project/
+STAT 424 Final Project Tony Wan/
 ├── ui.R
 ├── server.R
 └── update_temperature.csv
