@@ -24,6 +24,9 @@ shinyServer(function(input, output, session) {
   })
   
   output$plot1 <- renderPlotly({
+    validate(
+      need(input$year, "Please select a year.")
+    )
     df <- data_all()
     year_sel <- input$year
     df_year <- df %>% filter(Year == year_sel)
@@ -95,18 +98,36 @@ shinyServer(function(input, output, session) {
       labs(
         title = "Temperature vs Extreme Weather Events (Up to 5 Countries)",
         x = "Average Temperature (°C)",
-        y = "Number of Extreme Weather Events",
-        color = "Country"
+        y = "Number of Extreme Weather Events"
       ) +
       theme_minimal(base_size = 12) +
       theme(
         plot.title = element_text(size = 14, face = "bold"),
-        legend.position = if (isTRUE(input$show_legend2)) "bottom" else "none",
-        legend.title = element_text(size = 9, face = "bold"),
-        legend.text = element_text(size = 8)
+        legend.position = "none"
       )
     
-    ggplotly(p2, tooltip = "text")
+
+    fig <- ggplotly(p2, tooltip = "text")
+    
+   
+    fig <- fig %>% layout(
+      annotations = list(
+        x = 0.98, y = 0.95,          
+        xref = "paper", yref = "paper",
+        text = "Lines show changes over 2000–2024.<br>"
+        %>% paste0("Each point = 1 year’s avg temperature & extreme events."),
+        showarrow = FALSE,
+        font = list(size = 12),
+        align = "right",
+        bgcolor = "white",
+        bordercolor = "black",
+        borderwidth = 1,
+        opacity = 0.85
+      )
+    )
+    
+    fig
   })
   
+    
 })
