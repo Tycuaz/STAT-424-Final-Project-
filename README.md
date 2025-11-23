@@ -11,11 +11,12 @@ The dashboard contains two interactive panels that allow users to explore these 
 
 ## Repository Structure
 
+```bash
 project/
 ├── ui.R
 ├── server.R
 └── update_temperature.csv
-
+```
 
 ---
 
