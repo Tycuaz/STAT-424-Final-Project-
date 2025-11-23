@@ -25,3 +25,70 @@ project/
 
 ```bash
 git clone https://github.com/<your-team>/<your-repo>.git
+
+Open the project folder in RStudio.
+
+Run the Shiny application:
+
+shiny::runApp(".")
+
+
+Panel 1 — Energy & Emissions
+
+This panel visualizes the relationship between renewable energy usage and CO₂ emissions.
+
+Users can:
+
+Select a specific year (2000, 2005, 2010, 2015, 2020, 2024)
+
+Explore each country’s CO₂ emissions per capita
+
+See how CO₂ levels vary with renewable energy share
+
+Hover on points to reveal country-level details
+
+Show or hide the legend
+
+Main question addressed:
+Do countries that rely more on renewable energy tend to emit less CO₂ per capita?
+
+
+Panel 2 — Temperature & Extreme Weather
+
+This panel examines how temperature levels correspond to extreme weather events over time.
+
+Users can:
+
+Select up to 5 countries
+
+Compare temperature and extreme weather trends
+
+Observe year-to-year changes
+
+Hover on points and lines to view detailed information
+
+Toggle visibility of points and legend
+
+Main question addressed:
+Do higher temperatures lead to more extreme weather events?
+
+Dataset Description
+
+update_temperature.csv includes the following variables:
+
+Country
+
+Year
+
+Avg_Temperature_degC — Average annual temperature (°C)
+
+CO2_Emissions_tons_per_capita — CO₂ emissions per capita
+
+Renewable_Energy_pct — Share of renewable energy (%)
+
+Extreme_Weather_Events — Number of extreme weather events
+
+Additional climate and demographic indicators
+
+Dataset retrieved from Kaggle:
+https://www.kaggle.com/datasets/adilshamim8/temperature
