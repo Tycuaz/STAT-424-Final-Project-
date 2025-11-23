@@ -25,7 +25,7 @@ project/
 
 ```bash
 git clone https://github.com/<your-team>/<your-repo>.git
-
+---
 Open the project folder in RStudio.
 
 Run the Shiny application:
