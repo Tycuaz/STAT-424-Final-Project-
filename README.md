@@ -35,6 +35,8 @@ Run the Shiny application:
 shiny::runApp(".")
 ```
 
+---
+
 Panel 1 — Energy & Emissions
 
 This panel visualizes the relationship between renewable energy usage and CO₂ emissions.
@@ -74,6 +76,8 @@ Toggle visibility of points and legend
 Main question addressed:
 Do higher temperatures lead to more extreme weather events?
 
+---
+
 Dataset Description
 
 update_temperature.csv includes the following variables:
@@ -90,7 +94,7 @@ Renewable_Energy_pct — Share of renewable energy (%)
 
 Extreme_Weather_Events — Number of extreme weather events
 
-Additional climate and demographic indicators
+---
 
 Dataset retrieved from Kaggle:
 https://www.kaggle.com/datasets/adilshamim8/temperature
