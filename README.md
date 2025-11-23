@@ -31,8 +31,9 @@ Open the project folder in RStudio.
 
 Run the Shiny application:
 
+```bash
 shiny::runApp(".")
-
+```
 
 Panel 1 — Energy & Emissions
 
